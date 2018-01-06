@@ -1,0 +1,46 @@
+<div class="navbar navbar-light navbar-inverse fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a style="cursor: pointer" class="navbar-brand">CapsNiaga</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li style="cursor: pointer" routerLinkActive="active">
+                    <a routerLink="/"> <i class="fa fa-home fa-2x" aria-hidden="true"></i> </a>
+                </li>
+                <li style="cursor: pointer" class="dropdown " routerLinkActive="active" appDropdownDirective>
+                    <a style="cursor: pointer" role="button">contents <span class="caret "></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item bg-faded" *ngFor="let courses of contents">{{courses}}</li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-inline navbar-right">
+                <input class="form-control " type="text" placeholder="Search">
+                <button class="btn btn-outline-success " type="submit"> <i class="fa fa-search fa-1x"></i> </button>
+            </form>
+            <ul class="nav navbar-nav navbar-right ">
+                <li class="dropdown " appDropdownDirective>
+                    <a style="cursor: pointer" role="button"> <i class="fa fa-bell-o fa-1x"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a style="cursor: pointer"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;Invitations</a></li>
+                        <li><a style="cursor: pointer"><i class="fa fa-star-o" aria-hidden="true"></i>&nbsp; Results</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ">
+                <li class="dropdown " appDropdownDirective>
+                    <a style="cursor: pointer" role="button">Manage me <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a style="cursor: pointer"><i class="fa fa-user" aria-hidden="true"> &nbsp;Profile</i>                        </a></li>
+                        <li><a style="cursor: pointer"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Results</a></li>
+                        <li><a style="cursor: pointer"><i class="fa fa-group" aria-hidden="true"></i> &nbsp;Teams</a></li>
+                        <li><a style="cursor: pointer"><i class="fa fa-cog" aria-hidden="true"></i> &nbsp;Settings</a></li>
+                        <li><a style="cursor: pointer"><i class="fa fa-window-close" aria-hidden="true"></i> &nbsp;Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

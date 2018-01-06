@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-xs-8">
+        <div *ngIf="showCanvas" class="card card-inverse">
+            <div class="card-block">
+                <form (onSubmit)="onSubmit()">
+                    <h3 class="card-title">{{canvasContent}} Game </h3>
+                    <p class="card-text"> </p>
+                    <select class="select" name="level" id="level" [ngModel]="defaultLevel" required>
+                        <option class="option" value="" *ngFor="let level of difficulties">{{level}}</option>
+                    </select>
+                    <button class="plyButton"><span>Play</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- apiKey: "AIzaSyABqS_RBNrydDRen6p3yqfEGMAQbdsqEi4",
+    authDomain: "capsniaga.firebaseapp.com",
+    databaseURL: "https://capsniaga.firebaseio.com",
+    projectId: "capsniaga",
+    storageBucket: "",
+    messagingSenderId: "215149710683" -->

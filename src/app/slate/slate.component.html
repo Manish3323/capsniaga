@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-4">
+        <div id="sideNav" class="sidebar-nav-fixed affix">
+            <div id="well" class="well">
+                <ul class="nav ">
+                    <li class="nav-header"><i class="fa fa-gamepad fa-4x" aria-hidden="false"></i></li>
+                    <li class="active">
+                        <a style="cursor: pointer" (click)="onAddToCanvas(slateContent)" *ngFor="let slateContent of slateContents">{{slateContent}}</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.well -->
+        </div>
+        <!--/sidebar-nav-fixed -->
+    </div>
+</div>
+<!-- 
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-inverse p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div> -->

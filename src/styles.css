@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: darkslategray
+}
+
+.container {
+    margin-left: 0.2%;
+    width: 100%;
+}
+
+#sideNav {
+    margin-left: 2%;
+}
+
+#well {
+    background-color: rgba(223, 202, 20, 0.774);
+}
