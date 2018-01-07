@@ -21,5 +21,12 @@
             "result": 6,
             "impact": 0.5
         }
+    },
+    "users": {
+        "username": "manish",
+        "password": "Mani",
+        "email": "manish@fas.com",
+        "contact": "1434",
+        "gender": "M"
     }
 }

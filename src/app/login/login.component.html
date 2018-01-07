@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-7 fixed-center">
+        <div class="tabbable custom-tabs tabs-animated  flat flat-all hide-label-980 shadow papper-stack track-url auto-scroll">
+            <ul class="nav nav-tabs">
+                <li #activeLogin>
+                    <a data-toggle="tab"><i class="fa fa-lock fa-2x"></i><span> Login</span></a>
+                </li>
+                <li #activeReg>
+                    <a data-toggle="tab"><i class="fa fa-user fa-2x"></i><span> Register</span></a>
+                </li>
+
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="login" #login>
+                    <div class="row-fluid">
+                        <span id="invalid" *ngIf="submitted && !validUser"><h2>Invalid Credentials!!!</h2></span>
+                        <form ngForm="f" #f="ngForm" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col col-md-1"></div>
+                                <div class="col col-md-3">
+                                    <div class="span5"><i class="icon-user"></i>
+                                        <h4>Login as ?</h4>
+                                    </div>
+                                    <div class="radio" *ngFor="let type of types">
+                                        <label>
+                                        <input type="radio" name="type" id="type.key" [value]="type.key" ngModel>{{type.value}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-md-1"></div>
+                                <div class="col col-md-3">
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" id="username" class="form-control" ngModel name="username" #username="ngModel" required>
+                                        <span class="help-block" *ngIf="!username.valid && username.touched">Please enter a valid value</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-md-1"></div>
+                                <div class="col col-md-3">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" id="password" class="form-control" ngModel name="password" minlength="3" #password="ngModel" required>
+                                        <span class="help-block" *ngIf="!password.valid && password.touched">minimum  3 characters required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-md-1"></div>
+                                <div class="col col-md-3">
+                                    <button class="btn btn-primary" type="submit">Login</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

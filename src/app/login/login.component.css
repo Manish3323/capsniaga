@@ -1,0 +1,20 @@
+.tab-content {
+    background-color: white;
+    opacity: 0.8;
+    font-size: 14;
+    align-content: flex-start
+}
+
+button {
+    margin-bottom: 1em;
+    vertical-align: 2em;
+}
+
+.help-block {
+    opacity: 0.5;
+}
+
+#invalid {
+    background-color: red;
+    font-size: 18px;
+}

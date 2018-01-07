@@ -19,6 +19,9 @@ import { PlayerComponent } from './player/player.component';
 import { InstructorComponent } from './instructor/instructor.component';
 import { UserService } from './shared/user.service';
 import { StarboardComponent } from './starboard/starboard.component';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,11 +31,14 @@ import { StarboardComponent } from './starboard/starboard.component';
     CanvasComponent,
     PlayerComponent,
     InstructorComponent,
-    StarboardComponent
+    StarboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule, 
+    AppRoutingModule
     // AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestoreModule.enablePersistence(),
     // AngularFireDatabaseModule,

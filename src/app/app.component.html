@@ -1,5 +1,10 @@
 <div class="container">
     <app-header></app-header>
-    <app-player *ngIf="userType=='player'"></app-player>
-    <app-instructor *ngIf="userType=='instructor'"></app-instructor>
+    <app-login *ngIf="!validUser"></app-login>
+
+    <div *ngIf="validUser">
+        <app-player *ngIf="userType=='player'"></app-player>
+        <app-instructor *ngIf="userType=='instructor'"></app-instructor>
+    </div>
+
 </div>
