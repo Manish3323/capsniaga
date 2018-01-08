@@ -23,8 +23,8 @@
         }
     },
     "users": {
-        "username": "manish",
-        "password": "Mani",
+        "username": "player",
+        "password": "Player",
         "email": "manish@fas.com",
         "contact": "1434",
         "gender": "M"
