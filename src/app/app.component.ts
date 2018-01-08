@@ -18,21 +18,25 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.userService.getJSON().subscribe((res) => {
       this.users.push(res.users);
-      console.log(this.users);
+      // console.log(this.users);   this.users.push(res.users);
+      // console.log(this.users);
     });
 
     this.userService.validateUser.subscribe((user: User) => {
 
       if(user != null) {
         // tslint:disable-next-line:max-line-length
-        this.user = this.users.filter(obj => (obj.username.toUpperCase === user.username.toUpperCase || obj.email.toUpperCase === user.username.toUpperCase) && obj.password === user.password)[0];
-        if(this.user) {
-          this.userType = user.userType;
-          this.validUser = true;
-        }else{
-         return this.validUser = false;
-        }
-        }
+       // this.user = this.users.filter(obj => (obj.username.toUpperCase === user.username.toUpperCase || obj.email.toUpperCase === user.username.toUpperCase) && obj.password === user.password)[0];
+        // i f(this.user) {
+          if (user.username.toUpperCase === 'PLAYER'.toUpperCase && user.password === 'player') 
+          {
+              this.userType = user.userType;
+              this.validUser = true;
+              console.log('inside');
+            }else {
+             return this.validUser = false;
+            }
+            }
       });
   }
 }
