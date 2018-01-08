@@ -1,0 +1,32 @@
+{
+    "courses": {
+        "angular": {
+            "key": 1,
+            "name": "Finance",
+            "desc": "A Economical Help",
+            "result": 4,
+            "impact": 0.4
+        },
+        "science": {
+            "key": 2,
+            "name": "Marketing",
+            "desc": "A Promotional Help",
+            "result": 7,
+            "impact": 0.6
+        },
+        "maths": {
+            "key": 3,
+            "name": "Research & Development",
+            "desc": "A Technical Help",
+            "result": 6,
+            "impact": 0.5
+        }
+    },
+    "users": {
+        "username": "manish",
+        "password": "Mani",
+        "email": "manish@fas.com",
+        "contact": "1434",
+        "gender": "M"
+    }
+}
