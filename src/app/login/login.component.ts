@@ -1,11 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input ,ElementRef ,Renderer2 , EventEmitter ,ViewChild } from '@angular/core';
 import { UserService } from '../shared/user.service';
 import { NgForm } from '@angular/forms';
-import { ViewChild } from '@angular/core';
 import { User } from '../shared/user.model';
-import { ElementRef } from '@angular/core';
-import { Renderer2 } from '@angular/core';
-import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -28,8 +24,14 @@ export class LoginComponent implements OnInit {
   };
   userType: string;
   submitted = false;
+  @Input()
+  validUser: boolean;
+  validData: any;
   types= [ {key: 'player', value: 'Player'}, {key: 'instructor', value: 'Instructor'} ];
   genders = ['Male', 'Female'];
+
+
+
   constructor(private userService: UserService, private renderer: Renderer2) { }
 
   ngOnInit() {
@@ -56,5 +58,8 @@ export class LoginComponent implements OnInit {
     this.user.userType = this.form.value.type;
     this.userService.onValidateUser(this.user);
     this.form.reset();
+  }
+  onregister(){
+
   }
 }

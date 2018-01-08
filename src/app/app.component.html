@@ -1,6 +1,7 @@
 <div class="container">
+
     <app-header></app-header>
-    <app-login *ngIf="!validUser"></app-login>
+    <app-login *ngIf="!validUser" [validUser]="validUser"></app-login>
 
     <div *ngIf="validUser">
         <app-player *ngIf="userType=='player'"></app-player>
