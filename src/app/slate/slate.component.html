@@ -5,7 +5,8 @@
                 <ul class="nav ">
                     <li class="nav-header"><i class="fa fa-gamepad fa-4x" aria-hidden="false"></i></li>
                     <li class="active">
-                        <a style="cursor: pointer" (click)="onAddToCanvas(slateContent)" *ngFor="let slateContent of slateContents">{{slateContent}}</a>
+                        <!-- (click)="onAddToCanvas(slateContent)" -->
+                        <a style="cursor: pointer" *ngFor="let slateContent of slateContents">{{slateContent}}</a>
                     </li>
                 </ul>
             </div>

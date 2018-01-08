@@ -37,25 +37,26 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
      this.renderer.listen(this.activeLEl.nativeElement, 'click', (event) => {
       // Do something with 'event'
-      this.renderer.addClass(this.activeLEl.nativeElement, 'active');  
+      this.renderer.addClass(this.activeLEl.nativeElement, 'active');
      // this.renderer.removeClass(this.activeREl.nativeElement, 'active');
       this.renderer.addClass(this.loginEl.nativeElement, 'active');
-      this.renderer.removeClass(this.regEl.nativeElement, 'active');
+      // this.renderer.removeClass(this.regEl.nativeElement, 'active');
     });
-     this.renderer.listen(this.activeREl.nativeElement, 'click', (event) => {
+     // this.renderer.listen(this.activeREl.nativeElement, 'click', (event) => {
       // Do something with 'event'
       // this.renderer.addClass(this.activeREl.nativeElement, 'active');
       this.renderer.removeClass(this.activeLEl.nativeElement, 'active');
       this.renderer.removeClass(this.loginEl.nativeElement, 'active');
-      this.renderer.addClass(this.regEl.nativeElement, 'active');
-    });
-  }
+      // this.renderer.addClass(this.regEl.nativeElement, 'active');
+    }
+
 
   onSubmit() {
     this.submitted = true;
     this.user.username = this.form.value.username;
     this.user.password = this.form.value.password;
     this.user.userType = this.form.value.type;
+    this.userService.userType = this.form.value.type;
     this.userService.onValidateUser(this.user);
     this.form.reset();
   }

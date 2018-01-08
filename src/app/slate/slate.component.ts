@@ -31,7 +31,7 @@ export class SlateComponent implements OnInit {
     if(this.userService.userType === 'player') {
       this.slateContents =  [ 'No of players', 'My team', 'my strategy', 'View Reports'];
     }else if(this.userService.userType === 'instructor') {
-      this.slateContents = ['NO of players', 'Addd Online Quiz', 'View Reports', ' Gam COnfiguration'];
+      this.slateContents = ['NO of players', 'Add Online Quiz', 'View Reports', ' Game Configuration'];
     }
   }
   onAddToCanvas(content: string){

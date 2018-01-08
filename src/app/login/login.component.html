@@ -62,81 +62,81 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-content">
+                <!-- <div class="tab-content">
                     <div class="tab-pane" id="register" #register>
                         <div class="row-fluid">
                             <form ngForm="rf" #rf="ngForm">
-                                <!-- (ngSubmit)="onRegister()" -->
-                                <span id="invalid" *ngIf="submitted && !validData"><h2>Please fill valid data!!!</h2></span>
-                                <div class="row">
-                                    <div class="col col-md-1"></div>
-                                    <div class="col col-md-3">
-                                        <div class="span5"><i class="icon-user"></i>
-                                            <h4>Register</h4>
-                                        </div>
-                                        <div class="radio" *ngFor="let type of types">
-                                            <label>
+                                <!-- (ngSubmit)="onRegister()
+                <span id="invalid" *ngIf="submitted && !validData"><h2>Please fill valid data!!!</h2></span>
+                <div class="row">
+                    <div class="col col-md-1"></div>
+                    <div class="col col-md-3">
+                        <div class="span5"><i class="icon-user"></i>
+                            <h4>Register</h4>
+                        </div>
+                        <div class="radio" *ngFor="let type of types">
+                            <label>
                                             <input type="radio" name="type" id="type.key" [value]="type.key" ngModel required>{{type.value}}
                                         </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-1"></div>
-                                    <div class="col col-md-3">
-                                        <div class="form-group">
-                                            <label for="username">Username</label>
-                                            <input type="text" id="username" class="form-control" ngModel name="username" #username="ngModel" required>
-                                            <span class="help-block" *ngIf="!username.valid && username.touched">Please enter a valid value</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-1"></div>
-                                    <div class="col col-md-3">
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="email" id="email" class="form-control" ngModel name="email" #email="ngModel" required email>
-                                            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-1"></div>
-                                    <div class="col col-md-3">
-                                        <div class="form-group">
-                                            <label for="contact">Contact</label>
-                                            <input type="number" id="number" class="form-control" ngModel name="contact" #contact="ngModel" required minlength="10" maxlength="10" pattern="^[0-9]*">
-                                            <span class="help-block" *ngIf="!contact.valid && contact.touched">Please enter a valid contact number</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-1"></div>
-                                    <div class="col col-md-3">
-                                        <label for="gender">Gender</label>
-                                        <div class="radio" *ngFor="let gender of genders">
-                                            <label for="gender">
-                                            <input type="radio" name="gender" id="gender" [value]="gender" ngModel required>{{gender}}
-                                        </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col col-md-1"></div>
-                                    <div class="col col-md-3">
-                                        <label for="gender">Password</label>
-                                        <div class="radio" *ngFor="let gender of genders">
-                                            <label for="gender">
-                                                <input type="radio" name="gender" id="gender" [value]="gender" ngModel required>{{gender}}
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col col-md-1"></div>
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" class="form-control" ngModel name="username" #username="ngModel" required>
+                            <span class="help-block" *ngIf="!username.valid && username.touched">Please enter a valid value</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-1"></div>
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" ngModel name="email" #email="ngModel" required email>
+                            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-1"></div>
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <input type="number" id="number" class="form-control" ngModel name="contact" #contact="ngModel" required minlength="10" maxlength="10" pattern="^[0-9]*">
+                            <span class="help-block" *ngIf="!contact.valid && contact.touched">Please enter a valid contact number</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-1"></div>
+                    <div class="col col-md-3">
+                        <label for="gender">Gender</label>
+                        <div class="radio" *ngFor="let gender of genders">
+                            <label for="gender">
+                                            <input type="radio" name="gender" id="gender" [value]="gender" ngModel required>{{gender}}
+                                        </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-1"></div>
+                    <div class="col col-md-3">
+                        <label for="gender">Password</label>
+                        <div class="radio" *ngFor="let gender of genders">
+                            <label for="gender">
+                                                <input type="radio" name="gender" id="gender" [value]="gender" ngModel required>{{gender}}
+                                            </label>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
             </div>
         </div>
         <div class="col col-xs-5"></div>

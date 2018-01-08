@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.userService.getJSON().subscribe((res) => {
       this.users.push(res.users);
-      console.log(this.users)
+      console.log(this.users);
     });
 
     this.userService.validateUser.subscribe((user: User) => {
