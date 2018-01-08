@@ -11,9 +11,9 @@ import { User } from '../shared/user.model';
 export class LoginComponent implements OnInit {
   @ViewChild('f')form: NgForm;
   @ViewChild('login')loginEl: ElementRef;
-  @ViewChild('register')regEl: ElementRef;
+  // @ViewChild('register')regEl: ElementRef;
   @ViewChild('activeLogin')activeLEl: ElementRef;
-  @ViewChild('activeReg')activeREl: ElementRef;
+  // @ViewChild('activeReg')activeREl: ElementRef;
   user: User = {
     username: '',
     email: '',
